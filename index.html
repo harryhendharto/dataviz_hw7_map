@@ -61,7 +61,7 @@
 
     // //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
     Promise.all([ //waits for all the data to load, then when loaded will return it all in one array called res
-        d3.json('topo2.json'),
+        d3.json("topo2.json"),
     ])
         .then(ready)
         .catch((err) => {
@@ -135,7 +135,7 @@
             .attr("fill-opacity", 0.5)
             .style("stroke", "grey")
             .style("stroke-width", .2)
-            .attr("transform", d => 'translate(${projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])})')
+            .attr("transform", d => "translate(${projection([d.geometry.coordinates[0], d.geometry.coordinates[1]])})")
             .attr("r", d => radius(d.properties.pop_18_in_poverty))
 
         let popup = d3.select(".popup")
