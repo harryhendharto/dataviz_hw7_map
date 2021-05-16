@@ -6,21 +6,27 @@
     <style>
         .chart-container {
             max-width: 1050px;
-            border: 3px solid red;
+            /* border: 3px solid red; */
             margin: 0 auto;
             /* auto centers the div */
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         svg {
-            border: 2px solid purple;
+            /* border: 2px solid purple; */
             overflow: visible;
         }
 
 
         h1 {
-            border: 2px solid green;
+            /* border: 2px solid green; */
         }
+
+        .bubble {
+            fill-opacity: .8;
+            stroke: #fff;
+            stroke-width: .5px;
+}
     </style>
     <!-- add your script blocks at the end -->
 
@@ -28,9 +34,9 @@
 
 <body>
     <div class="chart-container">
-        <h1 class="headline">
+        <!-- <h1 class="headline">
             D3 starter template
-        </h1>
+        </h1> -->
 
         <svg width="1050px" height="500px">
 
@@ -110,6 +116,7 @@
 
             
         let counties = svg
+            .attr("class", "bubble")
             .selectAll(".counties")
             .data(county.features)
             .join("circle")
